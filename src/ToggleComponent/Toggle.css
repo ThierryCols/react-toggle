@@ -1,0 +1,45 @@
+#switch {
+ visibility: hidden;
+ position: relative;
+}
+
+.toggle-container {
+  display: flex;
+}
+
+.values-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  border-radius: 5px;
+  height: 35px;
+  width: 200px;
+}
+
+.value-checked, .value-unchecked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 100px;
+  z-index: 1;
+}
+
+#switch:after {
+ content: '';
+ visibility: visible;
+ display: block;
+ position: absolute;
+ left: -200px;
+ width: 95px;
+ height: 29px;
+ border-radius: 10px;
+ background-color: lightgreen;
+ box-shadow: 0px 0px 2px #888888;
+ transition: left 0.2s;
+}
+
+#switch:checked:after {
+  left: -100px;
+}
